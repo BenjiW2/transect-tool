@@ -23,6 +23,19 @@ this once.
 Needs a Mac with Apple silicon (M1 or newer) on macOS 13 Ventura or later. Your transects are saved in
 `Documents/Transect Tool`.
 
+### Windows app (nothing else to install)
+
+From the [Releases page](../../releases), download either:
+
+* `Transect-Tool-<version>-windows-setup.exe`: an installer. It adds Transect Tool to the Start menu and
+  doesn't need admin rights.
+* `Transect-Tool-<version>-windows-portable.zip`: no install. Unzip it anywhere and run `Transect Tool.exe`.
+
+Windows may show "Windows protected your PC" because the app isn't signed. Click **More info → Run
+anyway**. Needs 64-bit Windows 10 or 11. It uses Microsoft Edge's WebView2, which comes with Windows 11
+and up-to-date Windows 10. If WebView2 is missing, the tool opens in your normal web browser instead.
+Transects are saved in `Documents\Transect Tool`, and the log is in `%LOCALAPPDATA%\Transect Tool`.
+
 ### From source (Mac or Windows, needs Python 3.9+)
 
 * **Mac:** double-click `Start Transect Tool.command`.
@@ -83,7 +96,15 @@ rows) are ignored.
   `Documents/Transect Tool` (Mac app) or `projects` (from source). Delete a project's folder to remove it.
 * **Problems with the Mac app:** there's a log at `~/Library/Logs/Transect Tool.log`.
 
-## Building the Mac app
+## Building the apps
+
+### Windows
+
+Built automatically on GitHub (`.github/workflows/windows.yml`) whenever a version tag such as `v1.2.0`
+is pushed. The installer and portable zip are attached to that release. You can also run it by hand from
+the Actions tab. Each build runs a self-test of the packaged app (`Transect Tool.exe --selftest`).
+
+### Mac
 
 Needs [uv](https://docs.astral.sh/uv/) on an Apple-silicon Mac:
 

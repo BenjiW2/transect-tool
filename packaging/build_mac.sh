@@ -20,6 +20,10 @@ echo "==> Building app"
   --distpath "$BUILD/dist" --workpath "$BUILD/work" packaging/TransectTool.spec
 APP="$BUILD/dist/Transect Tool.app"
 
+echo "==> Self-test"
+"$APP/Contents/MacOS/Transect Tool" --selftest "$BUILD/selftest.txt" >/dev/null || { cat "$BUILD/selftest.txt"; exit 1; }
+tail -1 "$BUILD/selftest.txt"
+
 echo "==> Signing (ad-hoc)"
 codesign --force --deep --sign - "$APP"
 codesign --verify --deep "$APP"
