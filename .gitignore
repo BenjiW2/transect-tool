@@ -1,0 +1,5 @@
+.venv/
+projects/
+__pycache__/
+dist/
+packaging/icon.iconset/

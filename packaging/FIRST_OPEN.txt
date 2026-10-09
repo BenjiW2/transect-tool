@@ -1,0 +1,18 @@
+Transect Tool – installing and opening it the first time
+=========================================================
+
+1. Drag "Transect Tool" onto the Applications folder.
+
+2. Open it from Applications. Because the app isn't from the App Store, macOS will
+   stop it the first time with a message like "Apple could not verify Transect Tool...".
+   Click "Done" (not "Move to Bin"), then:
+
+     System Settings > Privacy & Security > scroll down >
+     "Transect Tool was blocked..." > click "Open Anyway" and confirm.
+
+   You only need to do this once.
+
+3. The app opens in its own window. Your transects are saved in
+   Documents > Transect Tool, so you can close the app and continue later.
+
+Needs a Mac with Apple silicon (M1 or newer) running macOS 13 Ventura or later.
